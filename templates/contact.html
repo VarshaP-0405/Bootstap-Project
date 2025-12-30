@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About & Contact - Hotel Bliss</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    .section {
+      padding: 60px 20px;
+    }
+    .section h2 {
+      color: #6c3483;
+      margin-bottom: 20px;
+    }
+    .section p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .hotel-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .social-icons img {
+      width: 32px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body style="background-color:lightblue;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Hotel Bliss</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/room">Rooms & Rates</a></li>
+          <li class="nav-item"><a class="nav-link" href="/amenities">Amenities</a></li>
+          <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="/reservation">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container section">
+    <h2 class="text-center">About Us</h2>
+    
+    
+    <p>  Hotel Bliss is a luxurious retreat in the heart of the city. We offer a unique blend of comfort, elegance, and personalized service to make your stay unforgettable. Whether you're here for business or leisure, our top-notch amenities, serene ambiance, and warm hospitality ensure a delightful experience every time. Our rooms are beautifully furnished, and our staff is dedicated to making your stay as pleasant as possible.
+    </p>
+  </div>
+
+
+  <div class="container section">
+    <h2 class="text-center">Contact Information</h2>
+    <p><strong>Address:</strong> 123 Luxury Lane, Bliss City, 456789</p>
+    <p><strong>Email:</strong> contact@hotelbliss.com</p>
+    <p><strong>Phone:</strong> +91 8925936484</p>
+    <p><strong>Follow us:</strong></p>
+    <p class="social-icons text-center">
+      <a href="https://facebook.com/hotelbliss" target="_blank">
+        <img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com/hotelbliss" target="_blank">
+        <img src="{{ url_for('static', filename='images/instagram-icon.png') }}" alt="Instagram" />
+      </a>
+      <a href="https://twitter.com/hotelbliss" target="_blank">
+        <img src="{{ url_for('static', filename='images/twitter-icon.png') }}" alt="Twitter" />
+      </a>
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 Hotel Bliss. All rights reserved.
+  </footer>
+</body>
+</html>
