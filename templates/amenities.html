@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amenities - Hotel Bliss</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .amenity-img {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body style="background-color:palegoldenrod;">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Hotel Bliss</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/room">Rooms & Rates</a></li>
+        <li class="nav-item"><a class="nav-link" href="/amenities">Amenities</a></li>
+        <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="/reservation">Reservation</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="container py-5 text-center">
+  <h1 class="display-4 text-uppercase text-primary mb-3">Our Amenities</h1>
+  <p class="lead text-muted">Experience luxury with our world-class amenities</p>
+</header>
+
+<section class="container-fluid px-4">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <img src="{{ url_for('static', filename='images/pool.jpg') }}" class="card-img-top amenity-img" alt="Pool" />
+        <div class="card-body">
+          <h5 class="card-title">Infinity Pool <span class="badge bg-primary">Popular</span></h5>
+          <p class="card-text text-muted">Relax and unwind in our temperature-controlled infinity pool with a city view.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <img src="{{ url_for('static', filename='images/spa.jpg') }}" class="card-img-top amenity-img" alt="Spa" />
+        <div class="card-body">
+          <h5 class="card-title">Luxury Spa</h5>
+          <p class="card-text text-muted">Enjoy rejuvenating massages and wellness therapies in our full-service spa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <img src="{{ url_for('static', filename='images/fit.jpg') }}" class="card-img-top amenity-img" alt="Gym" />
+        <div class="card-body">
+          <h5 class="card-title">Fitness Center</h5>
+          <p class="card-text text-muted">Stay fit while traveling with our 24/7 gym, equipped with modern machines.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <img src="{{ url_for('static', filename='images/dine.jpg') }}" class="card-img-top amenity-img" alt="Restaurant" />
+        <div class="card-body">
+          <h5 class="card-title">Gourmet Dining</h5>
+          <p class="card-text text-muted">Savor international cuisines and local flavors at our fine dining restaurant.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <img src="{{ url_for('static', filename='images/wifi.jpg') }}" class="card-img-top amenity-img" alt="WiFi" />
+        <div class="card-body">
+          <h5 class="card-title">High-Speed Wi-Fi</h5>
+          <p class="card-text text-muted">Stay connected with our complimentary high-speed wireless internet.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <img src="{{ url_for('static', filename='images/conference.jpg') }}" class="card-img-top amenity-img" alt="Conference Room" />
+        <div class="card-body">
+          <h5 class="card-title">Conference Rooms</h5>
+          <p class="card-text text-muted">Host meetings, conferences, and events in our professional spaces.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <h2 class="h3 text-uppercase text-center mb-4">What Guests Say</h2>
+  <blockquote class="blockquote text-center">
+    <p class="mb-0">"The spa and dining were extraordinary! Highly recommended."</p>
+    <footer class="blockquote-footer">Priya M., <cite title="Source Title">Guest</cite></footer>
+  </blockquote>
+
+  <ul class="list-inline text-center mt-4">
+    <li class="list-inline-item"><span class="badge bg-success">Clean Rooms</span></li>
+    <li class="list-inline-item"><span class="badge bg-info text-dark">24/7 Support</span></li>
+    <li class="list-inline-item"><span class="badge bg-warning text-dark">Top Reviews</span></li>
+  </ul>
+</section>
+
+<section class="container mb-5">
+  <h2 class="h4 text-uppercase mb-3">Amenity Schedule</h2>
+  <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Facility</th>
+        <th>Open Time</th>
+        <th>Close Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Pool</td><td>6:00 AM</td><td>10:00 PM</td></tr>
+      <tr><td>Spa</td><td>9:00 AM</td><td>9:00 PM</td></tr>
+      <tr><td>Gym</td><td>24 Hours</td><td>—</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  <p class="mb-0">&copy; 2025 Hotel Bliss. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
